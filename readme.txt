@@ -1,0 +1,16 @@
+1.
+将文件夹中object_detection文件夹和slim文件夹替换到models-master/research文件夹下对应文件夹
+2.
+网络说明：
+ssd
+输入图像大小:640*640
+基网：resnet18_v1
+类别数：90
+anchor等具体参数见outputfiles/pipline.config
+3.
+网络的pb文件为outputfiles/frozen_inference_graph.pb
+4.
+执行object_detection/example.py文件来调用ssd的pb进行检测
+example文件的输入参数：
+imgpath为图片位置，如outputfiles/1.jpg
+pbfile为pb文件位置，如outputfiles/frozen_inference_graph.pb
